@@ -26,15 +26,15 @@
             <article>
                 <!--kan evtl kobles til WP senere-->
                 <h1 class="normal-heading">Kontakt oss</h1>
-                    <div class="visit">
-                        <p>Ønsker du å besøke oss, er du velkommen i:</p>
-                        <p>Fjellsdalen 1, Bønes (Inngang B)</p>
-                    </div>
-                    <div class="openhours">
-                        <p>Åpningstidene våres er:</p>
-                        <p>Mandag - Torsdag: 17:00 - 19:30</p>
-                        <p>Lørdag: 13:00 - 16:00 </p>
-                    </div>
+                <div class="visit">
+                    <p>Ønsker du å besøke oss, er du velkommen i:</p>
+                    <p>Fjellsdalen 1, Bønes (Inngang B)</p>
+                </div>
+                <div class="openhours">
+                    <p>Åpningstidene våres er:</p>
+                    <p>Mandag - Torsdag: 17:00 - 19:30</p>
+                    <p>Lørdag: 13:00 - 16:00</p>
+                </div>
             </article>
             <aside class="contact-first-cat cat-illustration">
                 <img src="#" alt="Illustrasjon av en lilla stående katt" height="50px">
@@ -51,7 +51,22 @@
             </article>
         </section>
         <section class="contact-lower">
-
+            <!-- lagre input i wordpress et sted -->
+            <form action="#">
+                <fieldset>
+                    <legend>Er det noe annet du lurer på, kan du gjerne skrive oss en epost:</legend>
+                    <label for="name">Navn</label>
+                    <input type="text" id="name" name="name" placeholder="Ola Nordmann" required>
+                    <label for="email">Epost</label>
+                    <input type="text" id="email" name="email" placeholder="ola.nordmann@gmail.no" required>
+                    <label for="subject">Emne</label>
+                    <input type="text" id="subject" name="subject" placeholder="Fosterhjem spørsmål" required>
+                    <label for="message">Melding</label>
+                    <textarea name="message" id="message" cols="30" rows="10"
+                        placeholder="Hei! Jeg lurer på..."></textarea>
+                    <input type="submit" value="Send">
+                </fieldset>
+            </form>
         </section>
     </main>
     <footer>
