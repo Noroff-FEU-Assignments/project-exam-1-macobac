@@ -1,6 +1,6 @@
 const POSTS_API = "http://kattens-vern.local/wp-json/wp/v2/posts";
 
-let indxdiv = document.querySelector(".homepg-cat-container");
+let katterDiv = document.querySelector(".katter-cat-container");
 
 fetch (POSTS_API)
     .then(res => res.json())
@@ -12,7 +12,7 @@ fetch (POSTS_API)
                 <h1>${post.title.rendered}</h1>
             `;
             
-        indxdiv.appendChild(postCard);
+        katterDiv.appendChild(postCard);
     });
 })
     .catch(error => console.error(error));
