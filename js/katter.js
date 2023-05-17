@@ -37,18 +37,23 @@ function fetchAPI() {
       //make html markup with the new variables, remember to give classnames for grid and styling later
 
       data.forEach((post, i) => {
-        const postBoxes =
-          `
+        const postBoxes = `
         <div class="cat-posts">
           <img src="${catImgs[i]}">
           <h2 class="catName">${catNames[i]}</h2>
           <p class="catAge">${catAges[i]}</p>
         `
-
         document.querySelector(".katter-cat-container").innerHTML += postBoxes;
       })
 
       //make a see more btn which shows the rest (or 10 more) of the content
+
+      const moreBtn = document.createElement("button");
+      moreBtn.innerText = "Se flere";
+      moreBtn.addEventListener("click", () => {
+        alert("Clicked")
+      })
+      document.querySelector(".katter-cat-container").appendChild(moreBtn);
     })
     .catch((error) => console.error(error));
 
