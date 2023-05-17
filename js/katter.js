@@ -37,7 +37,7 @@ function displayPosts(data) {
     const restWords = restWord.title.rendered.split(" ");
     const lastWord = restWords.pop();
     const secLastWord = restWords.pop();
-    const joinedWords = secLastWord + lastWord;
+    const joinedWords = secLastWord + " " + lastWord;
     return joinedWords;
   });
 
