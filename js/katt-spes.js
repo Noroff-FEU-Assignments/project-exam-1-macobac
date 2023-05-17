@@ -15,12 +15,25 @@ function fetchAPI() {
 
 fetchAPI();
 
+
+
 function displayPost(data) {
+
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = data.content.rendered;
+    const imgEl = tempDiv.querySelector('img');
+    const src = imgEl ? imgEl.getAttribute('src') : null;
+
+    const pText = data.content.rendered.split("<p>").pop().split("</p>");
+    //OBS det funker ikke når man har flere p tags, fikse eller bare ha alt i 1 tag isaafall?
 
     const fetchedPost = `
         <h1 class="katt-spes-title">${data.title.rendered}</h1>
+        <img src="${src}">
+        <p class="katt-spes-text">${pText}</p>
         `
         ;
+
     spesContainer.innerHTML += fetchedPost;
 
 };
