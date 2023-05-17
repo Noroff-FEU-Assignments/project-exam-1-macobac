@@ -19,6 +19,8 @@ fetchAPI();
 
 function displayPost(data) {
 
+    const catName = data.title.rendered.split(" ")[0];
+
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = data.content.rendered;
     const imgEl = tempDiv.querySelector('img');
@@ -28,7 +30,7 @@ function displayPost(data) {
     //OBS det funker ikke når man har flere p tags, fikse eller bare ha alt i 1 tag isaafall?
 
     const fetchedPost = `
-        <h1 class="katt-spes-title">${data.title.rendered}</h1>
+        <h1 class="katt-spes-title">Katter som trenger hjem - ${catName}</h1>
         <img src="${src}">
         <p class="katt-spes-text">${pText}</p>
         `
@@ -39,5 +41,4 @@ function displayPost(data) {
 };
 
 
-//title has to change
 //modal should appear when images on blog post are clicked, making image bigger. click outside img to hide modal
