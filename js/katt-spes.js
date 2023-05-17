@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const spesContainer = document.querySelector(".spes-katt");
 const POSTS_API = "http://kattens-vern.local/wp-json/wp/v2/posts";
-
+const CATG_API = "http://kattens-vern.local/wp-json/wp/v2/categories";
 
 function fetchAPI() {
     const postId = urlParams.get("id");
@@ -38,7 +38,29 @@ function displayPost(data) {
 
     spesContainer.innerHTML += fetchedPost;
 
+    const catgArr = data.categories;
+    const catgProm = catgArr.map((catgId) => getCategory(catgId));
+
+    Promise.all(catgProm)
+        .then((catgs) => {
+            const fetchedCatgs = `
+            <div class="categories">
+            ${catgs.map((catg) => "<p>" + catg + "</p>").join("")}
+            </div>
+            `
+            spesContainer.innerHTML += fetchedCatgs;
+        })
+        .catch((error) => console.error(error));
 };
 
+function getCategory(catgId) {
+    return fetch(CATG_API + "/" + catgId)
+        .then((res) => res.json())
+        .then((data) => {
+            const catgDesc = data.description;
+            return catgDesc;
+        })
+        .catch((error) => console.error(error));
+};
 
 //modal should appear when images on blog post are clicked, making image bigger. click outside img to hide modal
