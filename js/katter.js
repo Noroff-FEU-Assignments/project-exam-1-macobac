@@ -17,10 +17,10 @@ fetch(POSTS_API)
 
     const restWords = data.map((restWord) => {
       const catAges = restWord.title.rendered.split(" ");
-      const lastWord = catAges.length > 1 ? catAges.pop() : '';
-      const secLastWord = catAges.length > 0 ? catAges.pop() : '';
-      console.log(secLastWord, lastWord);
-    });
+      const lastWord = catAges.pop();
+      const secLastWord = catAges.pop();
+      console.log(secLastWord, lastWord)
+    })
     
 
     //fetch image and store in new variable
