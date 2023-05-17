@@ -1,15 +1,25 @@
-const POSTS_API = `http://kattens-vern.local/wp-json/wp/v2/posts`;
+const POSTS_API = "http://kattens-vern.local/wp-json/wp/v2/posts";
 const catContainer = document.querySelector(".katter-cat-container");
-let start = 0;
+let page = 1;
 let limit = 10;
+let totalPosts = 0;
+
+const moreBtn = document.createElement("button");
+moreBtn.id = "moreBtn";
+moreBtn.innerText = "Se flere";
+moreBtn.addEventListener("click", fetchAPI)
 
 function fetchAPI() {
 
-  fetch("http://kattens-vern.local/wp-json/wp/v2/posts?start=${start}&limit=${limit}")
+  fetch(POSTS_API + "?page=" + page + "&per_page=" + limit)
     .then((res) => res.json())
     .then((data) => {
+      totalPosts = data.length;
       displayPosts(data);
-      start += limit;
+      page++;
+      if (data.length < limit || totalPosts < limit) {
+        document.getElementById("moreBtn").style.display = "none";
+      }
     })
     .catch((error) => console.error(error));
 }
@@ -21,7 +31,7 @@ function displayPosts(data) {
   const catNames = data.map((firstWord) => {
     const firstWords = firstWord.title.rendered.split(" ");
     return firstWords[0];
-  })
+  });
 
   const catAges = data.map((restWord) => {
     const restWords = restWord.title.rendered.split(" ");
@@ -29,7 +39,7 @@ function displayPosts(data) {
     const secLastWord = restWords.pop();
     const joinedWords = secLastWord + lastWord;
     return joinedWords;
-  })
+  });
 
   const catImgs = data.map((image) => {
     const tempDiv = document.createElement('div');
@@ -37,7 +47,7 @@ function displayPosts(data) {
     const imgEl = tempDiv.querySelector('img');
     const src = imgEl ? imgEl.getAttribute('src') : null;
     return src;
-  })
+  });
 
   data.forEach((post, i) => {
     const postBoxes = `
@@ -48,14 +58,15 @@ function displayPosts(data) {
       `
     catContainer.innerHTML += postBoxes;
   });
-}
 
-const moreBtn = document.createElement("button");
-moreBtn.innerText = "Se flere";
-moreBtn.addEventListener("click", () => {
-  fetchAPI();
-});
-catContainer.appendChild(moreBtn);
+  if (!moreBtn.parentNode && totalPosts >= limit) {
+    catContainer.appendChild(moreBtn);
+  } else if (moreBtn.parentNode && totalPosts < limit) {
+    moreBtn.parentNode.removeChild(moreBtn);
+  }
+  
+};
+
 
 
 
