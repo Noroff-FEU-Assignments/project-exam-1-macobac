@@ -51,7 +51,7 @@ function displayPosts(data) {
 
   data.forEach((post, i) => {
     const postBoxes = `
-      <a href="/html/katt-spes.html?id=${post.link[i]}">
+      <a href="/html/katt-spes.html?id=${post.id}">
       <div class="cat-posts">
         <img src="${catImgs[i]}">
         <h2 class="catName">${catNames[i]}</h2>
@@ -68,12 +68,3 @@ function displayPosts(data) {
   
 };
 
-
-
-
-//stikkord:
-//.map
-//.forEach
-//.slice
-//.split
-//.join
