@@ -51,6 +51,7 @@ function displayPosts(data) {
 
   data.forEach((post, i) => {
     const postBoxes = `
+      <a href="/html/katt-spes.html?id=${post.link[i]}">
       <div class="cat-posts">
         <img src="${catImgs[i]}">
         <h2 class="catName">${catNames[i]}</h2>
