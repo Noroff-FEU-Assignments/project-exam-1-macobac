@@ -1,66 +1,63 @@
 const POSTS_API = `http://kattens-vern.local/wp-json/wp/v2/posts`;
+const catContainer = document.querySelector(".katter-cat-container");
+let start = 0;
+let limit = 10;
+
+const moreBtn = document.createElement("button");
+moreBtn.innerText = "Se flere";
+moreBtn.addEventListener("click", () => {
+  alert("Clicked")
+})
+catContainer.appendChild(moreBtn);
+
 
 function fetchAPI() {
 
-  fetch(POSTS_API)
+  fetch("http://kattens-vern.local/wp-json/wp/v2/posts?start=${start}&limit=${limit}")
     .then((res) => res.json())
     .then((data) => {
-
-      //fetch first word of heading only and store in new variable
-
-      const catNames = data.map((firstWord) => {
-        const firstWords = firstWord.title.rendered.split(" ");
-        return firstWords[0];
-      })
-
-      //fetch everything but the first word of heading and store in new variable
-
-      const catAges = data.map((restWord) => {
-        const restWords = restWord.title.rendered.split(" ");
-        const lastWord = restWords.pop();
-        const secLastWord = restWords.pop();
-        const joinedWords = secLastWord + lastWord;
-        return joinedWords;
-      })
-
-      //fetch image and store in new variable
-
-      const catImgs = data.map((image) => {
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = image.content.rendered;
-        const imgEl = tempDiv.querySelector('img');
-        const src = imgEl ? imgEl.getAttribute('src') : null;
-        return src;
-      });
-
-
-      //make html markup with the new variables, remember to give classnames for grid and styling later
-
-      data.forEach((post, i) => {
-        const postBoxes = `
-        <div class="cat-posts">
-          <img src="${catImgs[i]}">
-          <h2 class="catName">${catNames[i]}</h2>
-          <p class="catAge">${catAges[i]}</p>
-        `
-        document.querySelector(".katter-cat-container").innerHTML += postBoxes;
-      })
-
-      //make a see more btn which shows the rest (or 10 more) of the content
-
-      const moreBtn = document.createElement("button");
-      moreBtn.innerText = "Se flere";
-      moreBtn.addEventListener("click", () => {
-        alert("Clicked")
-      })
-      document.querySelector(".katter-cat-container").appendChild(moreBtn);
+      displayPosts(data);
+      start += limit;
     })
     .catch((error) => console.error(error));
-
 }
 
 fetchAPI();
-//do this once more, use whole day if it needs to
+
+function displayPosts(data) {
+
+  const catNames = data.map((firstWord) => {
+    const firstWords = firstWord.title.rendered.split(" ");
+    return firstWords[0];
+  })
+
+  const catAges = data.map((restWord) => {
+    const restWords = restWord.title.rendered.split(" ");
+    const lastWord = restWords.pop();
+    const secLastWord = restWords.pop();
+    const joinedWords = secLastWord + lastWord;
+    return joinedWords;
+  })
+
+  const catImgs = data.map((image) => {
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = image.content.rendered;
+    const imgEl = tempDiv.querySelector('img');
+    const src = imgEl ? imgEl.getAttribute('src') : null;
+    return src;
+  })
+
+  data.forEach((post, i) => {
+    const postBoxes = `
+      <div class="cat-posts">
+        <img src="${catImgs[i]}">
+        <h2 class="catName">${catNames[i]}</h2>
+        <p class="catAge">${catAges[i]}</p>
+      `
+    catContainer.innerHTML += postBoxes;
+  });
+}
+
 //stikkord:
 //.map
 //.forEach
