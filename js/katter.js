@@ -3,14 +3,6 @@ const catContainer = document.querySelector(".katter-cat-container");
 let start = 0;
 let limit = 10;
 
-const moreBtn = document.createElement("button");
-moreBtn.innerText = "Se flere";
-moreBtn.addEventListener("click", () => {
-  alert("Clicked")
-})
-catContainer.appendChild(moreBtn);
-
-
 function fetchAPI() {
 
   fetch("http://kattens-vern.local/wp-json/wp/v2/posts?start=${start}&limit=${limit}")
@@ -57,6 +49,15 @@ function displayPosts(data) {
     catContainer.innerHTML += postBoxes;
   });
 }
+
+const moreBtn = document.createElement("button");
+moreBtn.innerText = "Se flere";
+moreBtn.addEventListener("click", () => {
+  fetchAPI();
+});
+catContainer.appendChild(moreBtn);
+
+
 
 //stikkord:
 //.map
