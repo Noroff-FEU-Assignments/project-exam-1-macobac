@@ -55,7 +55,7 @@
         </section>
         <section class="contact-lower">
             <!-- lagre input i wordpress et sted -->
-            <form action="#">
+            <form id="form" action="#" novalidate>
                 <fieldset>
                     <legend>Er det noe annet du lurer på, kan du gjerne skrive oss en epost:</legend>
                     <label for="name">Navn</label>
@@ -67,9 +67,10 @@
                     <label for="message">Melding</label>
                     <textarea name="message" id="message" cols="30" rows="10"
                         placeholder="Hei! Jeg lurer på..."></textarea>
-                    <input type="submit" value="Send">
+                    <input type="submit" value="Send" id="submitBtn">
                 </fieldset>
             </form>
+            <div id="show-error"></div>
         </section>
     </main>
     <footer>
@@ -95,7 +96,7 @@
         </div>
     </footer>
     <!--koble til riktig js fil -->
-    <script src="#"></script>
+    <script src="/js/kontakt.js"></script>
 </body>
 
 </html>
