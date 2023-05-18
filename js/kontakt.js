@@ -13,21 +13,3 @@ const submitBtn = document.querySelector("#submitBtn");
 const errDiv = document.querySelector("#show-error");
 
 const inputArr = [username, email, subject, message];
-
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    let errInput = [];
-
-    for (let i = 0; i < inputArr.length; i++) {
-        if (inputArr[i].value.trim() === "") {
-            errInput.push(inputArr[i].id);
-        }
-    }
-
-    if (errInput.length > 0) {
-        const errMsg = errInput.map(inputId => "<p>Felt " + inputId + " er tomt. Du må fylle ut alle felt for å sende formularet.</p>").join("");
-        errDiv.innerHTML = errMsg;
-    } else {
-        errDiv.innerHTML = "";
-    }
-});
