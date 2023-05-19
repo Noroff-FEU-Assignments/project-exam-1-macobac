@@ -14,25 +14,23 @@ const nameErr = document.querySelector("#nameErr");
 const emailErr = document.querySelector("#emailErr");
 const subjectErr = document.querySelector("#subjectErr");
 const messageErr = document.querySelector("#messageErr");
-const emailRegex = /\S+@\S+\.\S+/;
 const inputArr = [username, email, subject, message];
 const errArr = [nameErr, emailErr, subjectErr, messageErr];
+const emailRegex = /\S+@\S+\.\S+/;
 
-submitBtn.addEventListener("click", checkInput);
+
+submitBtn.addEventListener("click", function(event) {
+  checkInput(event.target.value);
+});
 
 function checkInput() {
-    if (username.value.length === 0) {
 
-    }
 }
 
 
+
+
 /* 
-const validEmail = emailRegex.test()
-
-
-
-
 function checkForm() {
   if (emailEl.value.length === 0) {
     alert("Please fill in your email");
