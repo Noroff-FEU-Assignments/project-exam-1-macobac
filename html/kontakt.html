@@ -60,17 +60,20 @@
                     <legend>Er det noe annet du lurer på, kan du gjerne skrive oss en epost:</legend>
                     <label for="name">Navn</label>
                     <input type="text" id="name" name="name" placeholder="Ola Nordmann" required>
+                    <div class="errDiv" id="nameErr"></div>
                     <label for="email">Epost</label>
                     <input type="text" id="email" name="email" placeholder="ola.nordmann@gmail.no" required>
+                    <div class="errDiv" id="emailErr"></div>
                     <label for="subject">Emne</label>
                     <input type="text" id="subject" name="subject" placeholder="Fosterhjem spørsmål" required>
+                    <div class="errDiv" id="subjectErr"></div>
                     <label for="message">Melding</label>
                     <textarea name="message" id="message" cols="30" rows="10"
                         placeholder="Hei! Jeg lurer på..."></textarea>
+                        <div class="errDiv" id="messageErr"></div>
                     <input type="submit" value="Send" id="submitBtn">
                 </fieldset>
             </form>
-            <div id="show-error"></div>
         </section>
     </main>
     <footer>

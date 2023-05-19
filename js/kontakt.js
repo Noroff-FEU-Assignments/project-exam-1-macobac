@@ -10,6 +10,42 @@ const email = document.querySelector("#email");
 const subject = document.querySelector("#subject");
 const message = document.querySelector("#message");
 const submitBtn = document.querySelector("#submitBtn");
-const errDiv = document.querySelector("#show-error");
-
+const nameErr = document.querySelector("#nameErr");
+const emailErr = document.querySelector("#emailErr");
+const subjectErr = document.querySelector("#subjectErr");
+const messageErr = document.querySelector("#messageErr");
+const emailRegex = /\S+@\S+\.\S+/;
 const inputArr = [username, email, subject, message];
+const errArr = [nameErr, emailErr, subjectErr, messageErr];
+
+submitBtn.addEventListener("click", checkInput);
+
+function checkInput() {
+    if (username.value.length === 0) {
+
+    }
+}
+
+
+/* 
+const validEmail = emailRegex.test()
+
+
+
+
+function checkForm() {
+  if (emailEl.value.length === 0) {
+    alert("Please fill in your email");
+  } else if (!emailEl.value.match(validEmail)) {
+    alert("Invalid Email address");
+  } else if (inqEl.value.length === 0) {
+    alert("Please fill in your inquiry");
+  } else {
+    alert("Inquiry is sent");
+    inputsArr.forEach(input => {
+        input.value = '';
+      });
+    return true;
+  }
+}
+ */
