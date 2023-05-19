@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    margin: 20px 40px;
+}
+
+header {
+    background-color: blue;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 30px;
+}
+
+.nav-menu, .mobile-menu {
+    display: none;
+}
+
+.nav-bars {
+    font-size: 1.5rem;
+}
+
+.mobile-menu:checked ~ .nav-menu{
+    display: block;
+}
