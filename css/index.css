@@ -1,8 +1,8 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
 body {
     margin: 20px 40px;
@@ -14,27 +14,39 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    position: relative;
 }
 
 .nav-logo img {
     height: 30px;
 }
 
-.nav-menu, .mobile-menu {
-    display: none;
-}
 
 .nav-bars {
     font-size: 1.5rem;
 }
 
-.mobile-menu:checked ~ .nav-menu{
-    display: block;
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu:not(:checked)~.nav-menu {
+    display: none;
+}
+
+.mobile-menu:checked~.nav-menu {
+    display: flex;
 }
 
 .nav-menu {
-    display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    text-align: right;
     background-color: red;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    height: auto;
 }
+
