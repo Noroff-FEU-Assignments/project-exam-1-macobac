@@ -14,36 +14,66 @@ const nameErr = document.querySelector("#nameErr");
 const emailErr = document.querySelector("#emailErr");
 const subjectErr = document.querySelector("#subjectErr");
 const messageErr = document.querySelector("#messageErr");
-const inputArr = [username, email, subject, message];
-const errArr = [nameErr, emailErr, subjectErr, messageErr];
+const btnErr = document.querySelector("#btnErr");
 const emailRegex = /\S+@\S+\.\S+/;
 
 
-submitBtn.addEventListener("click", function(event) {
-  checkInput(event.target.value);
-});
+submitBtn.addEventListener("click", validateForm);
+username.addEventListener("input", clearErrMsg);
+email.addEventListener("input", clearErrMsg);
+subject.addEventListener("input", clearErrMsg);
+message.addEventListener("input", clearErrMsg);
+submitBtn.addEventListener("input", clearErrMsg);
 
-function checkInput() {
+function validateForm() {
 
-}
-
-
-
-
-/* 
-function checkForm() {
-  if (emailEl.value.length === 0) {
-    alert("Please fill in your email");
-  } else if (!emailEl.value.match(validEmail)) {
-    alert("Invalid Email address");
-  } else if (inqEl.value.length === 0) {
-    alert("Please fill in your inquiry");
-  } else {
-    alert("Inquiry is sent");
-    inputsArr.forEach(input => {
-        input.value = '';
-      });
-    return true;
+  if (username.value === "") {
+    nameErr.innerHTML += "<p>Navn kan ikke være blank.</p>";
+    return false;
+  } else if (username.value.length < 5) {
+    nameErr.innerHTML += "<p>Navn må være lengre enn 5 bokstaver.</p>";
+    return false;
   }
+
+  if (email.value === "") {
+    emailErr.innerHTML += "<p>Epost kan ikke være blank.</p>";
+    return false;
+  } else {
+    if (!emailRegex.test(email.value)) {
+      emailErr.innerHTML += "<p>Skriv en gyldig epost.</p>";
+      return false;
+    }
+  }
+
+  if (subject.value === "") {
+    subjectErr.innerHTML += "<p>Melding kan ikke være blank.</p>";
+    return false;
+  } else {
+    if (subject.value.length < 15) {
+      subjectErr.innerHTML += "<p>Melding må være minst 15 bokstaver lang.</p>";
+      return false;
+    }
+  }
+
+  if (message.value === "") {
+    messageErr.innerHTML += "<p>Tekstfeltet kan ikke være blank.</p>";
+    return false;
+  } else {
+    if (message.value.length < 25) {
+      messageErr.innerHTML += "<p>Meldingen må være minst 25 bokstaver lang.</p>";
+      return false;
+    }
+  }
+
+  btnErr.innerHTML += "<p>Kontaktformularet ble sendt.</p>";
+  form.reset();
+  return true;
 }
- */
+
+
+function clearErrMsg() {
+  nameErr.innerHTML = "";
+  emailErr.innerHTML = "";
+  subjectErr.innerHTML = "";
+  messageErr.innerHTML = ""; 
+}
