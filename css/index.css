@@ -102,6 +102,7 @@ header {
     font-family: "noto-sans", sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 1.5rem;
 }
 
 .big-heading span {
@@ -139,4 +140,17 @@ header {
 
 footer {
     background-color: var(--green);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-logo img{
+    height: 25px;
+}
+
+.copyright {
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: space-between;
 }
