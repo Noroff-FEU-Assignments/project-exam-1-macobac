@@ -12,6 +12,7 @@
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 img {
@@ -48,7 +49,6 @@ body {
 }
 
 header {
-    background-color: blue;
     height: 40px;
     display: flex;
     justify-content: space-between;
@@ -88,21 +88,28 @@ header {
     flex-direction: column;
     flex-wrap: wrap;
     text-align: right;
-    background-color: red;
+    background-color: var(--green);
     position: absolute;
     top: 100%;
     right: 0;
     width: 50%;
     height: auto;
+    box-shadow: -5px 5px 20px 0px #0000004a;
 }
 
 .nav-item {
-    padding-top: 10%;
+    padding-top: 40%;
     padding-right: 10%;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+    font-weight: 600;
 }
 
 .nav-item:last-child {
-    padding-bottom: 10%;
+    padding-bottom: 40%;
 }
 
 /*Homepage mobile*/
@@ -143,6 +150,7 @@ header {
 
 .standard-article a {
     text-align: right;
+    text-decoration: underline;
 }
 
 .home-lower {
@@ -198,7 +206,6 @@ header {
 .a-se-mer {
     text-align: right;
     text-decoration: underline;
-    cursor: pointer;
 }
 
 .a-se-mer:hover {
