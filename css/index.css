@@ -218,14 +218,34 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 3% 0%;
+}
+
+.footer-logo {
+    align-self: center;
+    padding: 1% 0%;
 }
 
 .footer-logo img {
     height: 25px;
 }
 
+footer li {
+    padding: 1% 0%;
+    list-style: none;
+}
+
+footer li a {
+    cursor: pointer;
+}
+
+footer li a:hover {
+    text-decoration: underline;
+}
+
 .copyright {
     font-size: 0.7rem;
-    display: flex;
+    display: flex; 
     justify-content: space-between;
+
 }
