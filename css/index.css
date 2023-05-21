@@ -154,6 +154,11 @@ header {
     padding-bottom: 5%;
 }
 
+.homepg-cat-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .cat-posts {
     display: flex;
     flex-direction: column;
