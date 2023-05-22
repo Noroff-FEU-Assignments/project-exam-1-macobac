@@ -30,8 +30,10 @@ function displayPost(data) {
     //OBS det funker ikke når man har flere p tags, fikse eller bare ha alt i 1 tag isaafall?
 
     const fetchedPost = `
-        <h1 class="katt-spes-title">Katter som trenger hjem - ${catName}</h1>
+        <h1 class="katt-spes-title normal-heading">Katter som trenger hjem - ${catName}</h1>
+        <div class="cat-posts-img katt-spes-img">
         <img src="${src}">
+        </div>
         <p class="katt-spes-text">${pText}</p>
         `
         ;
@@ -44,7 +46,7 @@ function displayPost(data) {
     Promise.all(catgProm)
         .then((catgs) => {
             const fetchedCatgs = `
-            <div class="categories">
+            <div class="categories"><div class="catpaw-symbol"></div>
             ${catgs.map((catg) => "<p>" + catg + "</p>").join("")}
             </div>
             `

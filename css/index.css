@@ -412,3 +412,31 @@ footer li a:hover {
     width: 150px;
     margin-left: auto;
 }
+
+
+
+
+
+/* -----Katt spes mobile----- */
+
+/* fikse flere imgs i wp */
+.katt-spes-img {
+    width: 300px;
+}
+
+.katt-spes-text {
+    line-height: 2;
+}
+
+/* trenger symbol foran hver */
+.categories {
+    line-height: 2;
+}
+
+.catpaw-symbol {
+    background-image: url("/images/catpaw.png");
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: 50%;
+}
