@@ -260,7 +260,6 @@ footer li a:hover {
 
 .homepg-article-only {
     background-color: var(--green);
-    position: relative;
     display: flex;
     flex-direction: column;
     box-shadow: inset 0px 0px 15px 10px #00000013;
