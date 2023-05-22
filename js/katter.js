@@ -53,7 +53,7 @@ function displayPosts(data) {
     const postBoxes = `
       <a href="/html/katt-spes.html?id=${post.id}">
       <div class="cat-posts">
-        <img src="${catImgs[i]}">
+      <div class="cat-posts-img"><img src="${catImgs[i]}"></div>
         <h2 class="catName">${catNames[i]}</h2>
         <p class="catAge">${catAges[i]}</p>
       `
