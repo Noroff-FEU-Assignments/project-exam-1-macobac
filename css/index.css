@@ -183,7 +183,8 @@ footer li a:hover {
     line-height: 2;
 }
 
-.normal-upper, .normal-lower {
+.normal-upper,
+.normal-lower {
     width: 100%;
     padding: 5% 7%;
 }
@@ -235,7 +236,7 @@ footer li a:hover {
 
 
 
-/*Homepage mobile*/
+/* -----Homepage mobile----- */
 
 .home-upper .normal-big-heading {
     margin: 5% 7%;
@@ -309,7 +310,7 @@ footer li a:hover {
     justify-content: space-between;
     width: 100%;
     cursor: pointer;
-    
+
 }
 
 .fa-caret-up {
@@ -334,4 +335,22 @@ footer li a:hover {
     width: 100%;
     background-position: center;
     background-size: 100%;
+}
+
+#moreBtn {
+    background-color: var(--green);
+    font-family: "noto-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    padding: 2% 0%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 10px 3px #00000013;
+    width: 170px;
+    cursor: pointer;
+}
+
+#moreBtn:hover {
+    text-decoration: underline;
 }
