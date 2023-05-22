@@ -247,7 +247,7 @@ footer li a:hover {
     color: var(--darkgreen);
 }
 
-.cat-chilling {
+/* .cat-chilling {
     background-image: url("/images/cat-chilling.png");
     background-repeat: no-repeat;
     height: 100%;
@@ -258,7 +258,7 @@ footer li a:hover {
     background-position: right;
     top: -17%;
     right: 0;
-}
+} */
 
 .homepg-article-only {
     background-color: var(--green);
@@ -280,6 +280,7 @@ footer li a:hover {
 .se-mer:hover {
     font-weight: 700;
 }
+
 
 
 
@@ -353,4 +354,46 @@ footer li a:hover {
 
 #moreBtn:hover {
     text-decoration: underline;
+}
+
+
+
+
+/* -----Contact mobile----- */
+
+.visit, .openhours {
+    padding-bottom: 6%;
+}
+
+.visit p, .openhours p{
+    padding: 1% 0%;
+}
+
+/* må flytte denne til høyre */
+.socials {
+    display: flex;
+    flex-direction: row;
+    padding: 3% 0%;
+}
+
+.socials i {
+    font-size: 1.4rem;
+    padding-right: 10px;
+}
+
+.low-contact fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.low-contact legend {
+    padding-bottom: 6%;
+}
+
+.low-contact input, textarea {
+    padding: 2% 0%;
+    border: 0.5px solid #707070;
+    border-radius: 5px;
+    box-shadow: inset 2px 5px 10px 0px #68686813;
 }
