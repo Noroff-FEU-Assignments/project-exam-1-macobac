@@ -4,22 +4,25 @@
 
 
 det som enda må gjøres:
-# Css on kontakt.html 
-# Css on omoss.html
-# Css on katt spes.html
-# Expand FAQ on omoss.html
-# Modal on katt spes.html
-# Carousel on index.html
+
+- when fetching p tag problem - multiple p tags
+- Expand FAQ on omoss.html
+- get categories each alone
+- kontaktoss btn :active or :hover
+- Modal on katt spes.html (desktop)
+- Carousel on index.html (desktop)
 - Click outside nav in mobile to exit nav
-- Cat chilling img on index.html
-- Cat hanging img on katter.html
-- Cat sitting on om oss.html
+
 
 ## Husk det trenger bare å bli eksamens ferdig, kan modifiseres til KV senere.
 
-
-
-
+later:
+- paste multiple imgs in wp
+- fetch multiple imgs
+- Cat chilling img on index.html
+- Cat hanging img on katter.html
+- Cat sitting on footer at omoss.html
+- two cats on kontakt.html
 
 ## Goal
 To put into practice the skills learned over your first year of studies.
