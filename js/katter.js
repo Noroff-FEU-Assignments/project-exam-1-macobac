@@ -54,8 +54,8 @@ function displayPosts(data) {
       <a href="/html/katt-spes.html?id=${post.id}">
       <div class="cat-posts">
       <div class="cat-posts-img"><img src="${catImgs[i]}"></div>
-        <h2 class="catName">${catNames[i]}</h2>
-        <p class="catAge">${catAges[i]}</p>
+        <h2 class="cat-name">${catNames[i]}</h2>
+        <p class="cat-age">${catAges[i]}</p>
       `
     catContainer.innerHTML += postBoxes;
   });

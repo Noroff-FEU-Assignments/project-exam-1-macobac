@@ -209,6 +209,7 @@ footer li a:hover {
 
 .cat-posts-img img {
     aspect-ratio: 1/1;
+    border-radius: 5px;
 }
 
 .cat-name {
@@ -311,7 +312,6 @@ footer li a:hover {
     
 }
 
-
 .fa-caret-up {
     font-size: 1rem;
     color: var(--darkgreen);
@@ -320,6 +320,9 @@ footer li a:hover {
 .faq-a {
     display: none;
 }
+
+
+
 
 
 /* -----Katter mobile----- */
