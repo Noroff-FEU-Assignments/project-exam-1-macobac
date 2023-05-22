@@ -46,8 +46,11 @@ function displayPost(data) {
     Promise.all(catgProm)
         .then((catgs) => {
             const fetchedCatgs = `
-            <div class="categories"><div class="catpaw-symbol"></div>
+            <div class="catg-wrapper">
+            <div class="catpaw-symbol"></div>
+            <div class="categories">
             ${catgs.map((catg) => "<p>" + catg + "</p>").join("")}
+            </div>
             </div>
             `
             spesContainer.innerHTML += fetchedCatgs;
