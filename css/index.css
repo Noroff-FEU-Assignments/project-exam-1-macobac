@@ -392,8 +392,23 @@ footer li a:hover {
 }
 
 .low-contact input, textarea {
-    padding: 2% 0%;
+    font-family: "noto-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    color: #C9C9C9;
     border: 0.5px solid #707070;
     border-radius: 5px;
     box-shadow: inset 2px 5px 10px 0px #68686813;
+    padding: 3%;
+    margin: 3% 0%;
+}
+
+/* fix box shadow */
+#submitBtn {
+    color: inherit;
+    border: none;
+    background-color: var(--green);
+    width: 150px;
+    margin-left: auto;
 }
