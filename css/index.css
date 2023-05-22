@@ -87,29 +87,28 @@ header {
 .nav-menu {
     flex-direction: column;
     flex-wrap: wrap;
-    text-align: right;
+    text-align: center;
     background-color: var(--green);
     position: absolute;
     top: 100%;
-    right: 0;
-    width: 50%;
+    width: 100%;
     height: auto;
     box-shadow: -5px 5px 20px 0px #0000004a;
 }
 
 .nav-item {
-    padding-top: 40%;
-    padding-right: 10%;
+    padding-top: 15%;
     cursor: pointer;
 }
 
 .nav-item:hover {
     text-decoration: underline;
+    font-size: larger;
     font-weight: 600;
 }
 
 .nav-item:last-child {
-    padding-bottom: 40%;
+    padding-bottom: 15%;
 }
 
 /*Homepage mobile*/
@@ -175,11 +174,12 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 7%;
 }
 
 .cat-posts-img {
-    width: 40%;
-    padding: 2% 0%;;
+    width: 160px;
+    padding: 4% 10%;;
 }
 
 .cat-posts-img img {
@@ -219,6 +219,7 @@ footer {
     flex-direction: column;
     text-align: center;
     padding: 3% 0%;
+    margin-top: 2%;
 }
 
 .footer-logo {
@@ -227,16 +228,12 @@ footer {
 }
 
 .footer-logo img {
-    height: 25px;
+    height: 30px;
 }
 
 footer li {
     padding: 1% 0%;
     list-style: none;
-}
-
-footer li a {
-    cursor: pointer;
 }
 
 footer li a:hover {
@@ -247,5 +244,5 @@ footer li a:hover {
     font-size: 0.7rem;
     display: flex; 
     justify-content: space-between;
-
+    margin: 1% 7%;
 }
