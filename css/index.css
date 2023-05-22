@@ -170,11 +170,6 @@ footer li a:hover {
     padding-bottom: 5%;
 }
 
-.normal-big-heading {
-    margin: 5% 7%;
-    padding: 5% 0%;
-}
-
 .big-heading {
     font-family: "noto-sans", sans-serif;
     font-weight: 400;
@@ -188,7 +183,7 @@ footer li a:hover {
     line-height: 2;
 }
 
-.normal-lower {
+.normal-upper, .normal-lower {
     width: 100%;
     padding: 5% 7%;
 }
@@ -240,6 +235,11 @@ footer li a:hover {
 
 
 /*Homepage mobile*/
+
+.home-upper .normal-big-heading {
+    margin: 5% 7%;
+    padding: 5% 0%;
+}
 
 .big-heading span {
     color: var(--darkgreen);
