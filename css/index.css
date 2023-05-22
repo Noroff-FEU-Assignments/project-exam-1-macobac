@@ -320,3 +320,15 @@ footer li a:hover {
 .faq-a {
     display: none;
 }
+
+
+/* -----Katter mobile----- */
+
+.cat-box-img {
+    background-image: url("/images/box-cat.jpg");
+    background-repeat: no-repeat;
+    height: 120px;
+    width: 100%;
+    background-position: center;
+    background-size: 100%;
+}
