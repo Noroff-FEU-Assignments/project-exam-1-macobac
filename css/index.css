@@ -205,12 +205,10 @@ footer li a:hover {
 .cat-posts-img {
     width: 160px;
     padding: 4% 10%;
-    ;
 }
 
 .cat-posts-img img {
     aspect-ratio: 1/1;
-    border-radius: 5%;
 }
 
 .cat-name {
@@ -231,6 +229,8 @@ footer li a:hover {
     text-decoration: underline;
     font-weight: 700;
 }
+
+
 
 
 
@@ -279,3 +279,44 @@ footer li a:hover {
     font-weight: 700;
 }
 
+
+
+
+/* -----About mobile----- */
+
+.about-hide-img {
+    display: none;
+}
+
+.faq-wrapper {
+    padding: 1% 0%;
+}
+
+
+.faq-div {
+    background-color: var(--green);
+    font-family: "noto-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    padding: 3% 7%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 10px 3px #00000013;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+    
+}
+
+
+.fa-caret-up {
+    font-size: 1rem;
+    color: var(--darkgreen);
+}
+
+.faq-a {
+    display: none;
+}
