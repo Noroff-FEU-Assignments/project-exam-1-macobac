@@ -1,3 +1,27 @@
+/*
+font-family: "noto-sans", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+font-family: "noto-sans", sans-serif;
+font-weight: 400;
+font-style: italic;
+
+font-family: "noto-sans", sans-serif;
+font-weight: 500;
+font-style: normal;
+
+font-family: "noto-sans", sans-serif;
+font-weight: 700;
+font-style: normal;
+*/
+
+
+
+
+
+/* Styles for all */
+
 * {
     margin: 0;
     padding: 0;
@@ -22,26 +46,6 @@ img {
     object-position: center;
 }
 
-/*
-font-family: "noto-sans", sans-serif;
-font-weight: 400;
-font-style: normal;
-
-font-family: "noto-sans", sans-serif;
-font-weight: 400;
-font-style: italic;
-
-font-family: "noto-sans", sans-serif;
-font-weight: 500;
-font-style: normal;
-
-font-family: "noto-sans", sans-serif;
-font-weight: 700;
-font-style: normal;
-*/
-
-
-
 body {
     font-family: "noto-sans", sans-serif;
     font-weight: 400;
@@ -57,12 +61,11 @@ header {
     margin: 5% 7%;
 }
 
-.normal-heading {
-    font-family: "noto-sans", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 1.3rem;
-}
+
+
+
+
+/*----------Nav----------*/
 
 .nav-logo img {
     height: 30px;
@@ -111,107 +114,12 @@ header {
     padding-bottom: 15%;
 }
 
-/*Homepage mobile*/
 
-.big-heading-article {
-    margin: 5% 7%;
-    padding: 5% 0%;
-}
 
-.big-heading {
-    font-family: "noto-sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.5rem;
-}
 
-.big-heading span {
-    color: var(--darkgreen);
-}
 
-.standard-article {
-    background-color: var(--green);
-    width: 100%;
-    padding: 5% 7%;
-    line-height: 2;
-    display: flex;
-    flex-direction: column;
-    box-shadow: inset 0px 0px 15px 10px #00000013;
-}
 
-/* .cat-chilling img {
-    position: absolute;
-    z-index: 100;
-    top: -35%;
-    right: 0;
-    width: 50%;
-}  */
-
-.standard-article a {
-    text-align: right;
-    text-decoration: underline;
-}
-
-.home-lower {
-    width: 100%;
-    padding: 5% 7%;
-}
-
-.home-lower .normal-heading {
-    padding-bottom: 5%;
-}
-
-/* have to fix this to be 2x2 not 1x4 */
-
-.homepg-cat-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.cat-posts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 7%;
-}
-
-.cat-posts-img {
-    width: 160px;
-    padding: 4% 10%;;
-}
-
-.cat-posts-img img {
-    aspect-ratio: 1/1;
-    border-radius: 5%;
-}
-
-.cat-name {
-    font-family: "noto-sans", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 1rem;
-}
-
-.cat-age {
-    font-family: "noto-sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1rem;
-}
-
-/* some weird shit with width happening */
-
-.a-se-mer {
-    text-align: right;
-    text-decoration: underline;
-}
-
-.a-se-mer:hover {
-    color: var(--green);
-}
-
+/*-----Footer-----*/
 
 footer {
     background-color: var(--green);
@@ -242,7 +150,133 @@ footer li a:hover {
 
 .copyright {
     font-size: 0.7rem;
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     margin: 1% 7%;
 }
+
+
+
+
+
+
+/*-----Reuse code-----*/
+
+.normal-heading {
+    font-family: "noto-sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.3rem;
+    padding-bottom: 5%;
+}
+
+.normal-big-heading {
+    margin: 5% 7%;
+    padding: 5% 0%;
+}
+
+.big-heading {
+    font-family: "noto-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+.standard-article {
+    width: 100%;
+    padding: 5% 7%;
+    line-height: 2;
+}
+
+.normal-lower {
+    width: 100%;
+    padding: 5% 7%;
+}
+
+.cat-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cat-posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 7%;
+}
+
+.cat-posts-img {
+    width: 160px;
+    padding: 4% 10%;
+    ;
+}
+
+.cat-posts-img img {
+    aspect-ratio: 1/1;
+    border-radius: 5%;
+}
+
+.cat-name {
+    font-family: "noto-sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+.cat-age {
+    font-family: "noto-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+.cat-posts:hover {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+
+
+/*Homepage mobile*/
+
+.big-heading span {
+    color: var(--darkgreen);
+}
+
+.cat-chilling {
+    background-image: url("/images/cat-chilling.png");
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+    background-size: 50%;
+    background-position: right;
+    top: -17%;
+    right: 0;
+}
+
+.homepg-article-only {
+    background-color: var(--green);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 0px 0px 15px 10px #00000013;
+}
+
+.les-mer,
+.se-mer {
+    text-align: right;
+    text-decoration: underline;
+}
+
+.les-mer:hover {
+    font-weight: 700;
+}
+
+.se-mer:hover {
+    font-weight: 700;
+}
+
