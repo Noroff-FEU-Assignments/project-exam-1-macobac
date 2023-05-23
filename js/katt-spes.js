@@ -26,8 +26,8 @@ function displayPost(data) {
     const imgEl = tempDiv.querySelector('img');
     const src = imgEl ? imgEl.getAttribute('src') : null;
 
-    const pText = data.content.rendered.split("<p>").pop().split("</p>");
-    //OBS det funker ikke når man har flere p tags, fikse eller bare ha alt i 1 tag isaafall?
+    const ps = tempDiv.getElementsByTagName("p");
+    const pText = Array.from(ps).map(p => p.innerHTML).join(" ");
 
     const fetchedPost = `
         <h1 class="katt-spes-title normal-heading">Katter som trenger hjem - ${catName}</h1>
@@ -46,11 +46,13 @@ function displayPost(data) {
     Promise.all(catgProm)
         .then((catgs) => {
             const fetchedCatgs = `
-            <div class="catg-wrapper">
-            <div class="catpaw-symbol"></div>
-            <div class="categories">
-            ${catgs.map((catg) => "<p>" + catg + "</p>").join("")}
-            </div>
+  <div class="catg-wrapper">
+            ${catgs.map((catg) => `
+                <div class="catpaw-symbol"></div>
+                <div class="categories">
+                    <p>${catg}</p>
+                </div>
+            `).join("")}
             </div>
             `
             spesContainer.innerHTML += fetchedCatgs;

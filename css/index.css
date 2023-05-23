@@ -439,4 +439,7 @@ footer li a:hover {
     height: 100px;
     width: 100px;
     background-size: 50%;
+    display: inline-block;
+    vertical-align: middle;
+
 }
