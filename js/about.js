@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var faqDivs = document.querySelectorAll(".faq-div");
+document.addEventListener("DOMContentLoaded", () => {
+    const faqDivs = document.querySelectorAll(".faq-div");
 
-    faqDivs.forEach(function(div) {
-      div.addEventListener("click", function() {
-        this.classList.toggle("active");
-      });
+    faqDivs.forEach(div => {
+        div.addEventListener("click", () => {
+            div.classList.toggle("active");
+        });
     });
-  });
+});
