@@ -6,7 +6,6 @@
 det som enda må gjøres:
 
 
-- kontaktformular feilmld
 - Modal on katt spes.html (desktop)
 - Carousel on index.html (desktop)
 - Click outside nav in mobile to exit nav
@@ -17,6 +16,10 @@ fixed:
 - get categories each alone
 - Expand FAQ on omoss.html
 - kontaktoss btn :active or :hover
+- kontaktformular feilmld
+
+
+
 
 ## Husk det trenger bare å bli eksamens ferdig, kan modifiseres til KV senere.
 

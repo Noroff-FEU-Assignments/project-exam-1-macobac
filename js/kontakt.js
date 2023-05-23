@@ -26,46 +26,47 @@ message.addEventListener("input", clearErrMsg);
 submitBtn.addEventListener("input", clearErrMsg);
 
 function validateForm() {
+  clearErrMsg()
 
   if (username.value === "") {
-    nameErr.innerHTML += "<p>Navn kan ikke være blank.</p>";
+    nameErr.innerHTML = "<p>Navn kan ikke være blank.</p>";
     return false;
   } else if (username.value.length < 5) {
-    nameErr.innerHTML += "<p>Navn må være lengre enn 5 bokstaver.</p>";
+    nameErr.innerHTML = "<p>Navn må være lengre enn 5 bokstaver.</p>";
     return false;
   }
 
   if (email.value === "") {
-    emailErr.innerHTML += "<p>Epost kan ikke være blank.</p>";
+    emailErr.innerHTML = "<p>Epost kan ikke være blank.</p>";
     return false;
   } else {
     if (!emailRegex.test(email.value)) {
-      emailErr.innerHTML += "<p>Skriv en gyldig epost.</p>";
+      emailErr.innerHTML = "<p>Skriv en gyldig epost.</p>";
       return false;
     }
   }
 
   if (subject.value === "") {
-    subjectErr.innerHTML += "<p>Melding kan ikke være blank.</p>";
+    subjectErr.innerHTML = "<p>Melding kan ikke være blank.</p>";
     return false;
   } else {
     if (subject.value.length < 15) {
-      subjectErr.innerHTML += "<p>Melding må være minst 15 bokstaver lang.</p>";
+      subjectErr.innerHTML = "<p>Melding må være minst 15 bokstaver lang.</p>";
       return false;
     }
   }
 
   if (message.value === "") {
-    messageErr.innerHTML += "<p>Tekstfeltet kan ikke være blank.</p>";
+    messageErr.innerHTML = "<p>Tekstfeltet kan ikke være blank.</p>";
     return false;
   } else {
     if (message.value.length < 25) {
-      messageErr.innerHTML += "<p>Meldingen må være minst 25 bokstaver lang.</p>";
+      messageErr.innerHTML = "<p>Meldingen må være minst 25 bokstaver lang.</p>";
       return false;
     }
   }
 
-  btnErr.innerHTML += "<p>Kontaktformularet ble sendt.</p>";
+  btnErr.innerHTML = "<p>Kontaktformularet ble sendt.</p>";
   form.reset();
   return true;
 }
