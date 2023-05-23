@@ -5,10 +5,23 @@
 
 det som enda må gjøres:
 
-
+- responsiveness all pgs
 - Modal on katt spes.html (desktop)
 - Carousel on index.html (desktop)
+
+
+
+
+## Husk det trenger bare å bli eksamens ferdig, kan modifiseres til KV senere.
+
+later:
 - Click outside nav in mobile to exit nav
+- paste multiple imgs in wp
+- fetch multiple imgs
+- Cat chilling img on index.html
+- Cat hanging img on katter.html
+- Cat sitting on footer at omoss.html
+- two cats on kontakt.html
 
 
 fixed:
@@ -21,15 +34,9 @@ fixed:
 
 
 
-## Husk det trenger bare å bli eksamens ferdig, kan modifiseres til KV senere.
 
-later:
-- paste multiple imgs in wp
-- fetch multiple imgs
-- Cat chilling img on index.html
-- Cat hanging img on katter.html
-- Cat sitting on footer at omoss.html
-- two cats on kontakt.html
+
+
 
 ## Goal
 To put into practice the skills learned over your first year of studies.
