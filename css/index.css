@@ -370,6 +370,13 @@ footer li a:hover {
 
 
 /* -----Contact mobile----- */
+.err-p {
+    color: rgb(184, 0, 0);
+}
+
+.err-p-right {
+    color: var(--darkgreen);
+}
 
 .visit, .openhours {
     padding-bottom: 6%;
@@ -406,7 +413,6 @@ footer li a:hover {
     font-weight: 400;
     font-style: normal;
     font-size: 1rem;
-    color: #C9C9C9;
     border: 0.5px solid #707070;
     border-radius: 5px;
     box-shadow: inset 2px 5px 10px 0px #6868682b;
