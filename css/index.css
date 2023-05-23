@@ -323,8 +323,17 @@ footer li a:hover {
     display: none;
 }
 
+.faq-div.active + .faq-a {
+    display: block;
+}
 
+.faq-div i {
+    transition: transform 0.3s ease-in-out; 
+}
 
+.faq-div.active i {
+    transform: rotate(180deg); 
+}
 
 
 /* -----Katter mobile----- */

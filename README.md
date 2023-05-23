@@ -5,16 +5,17 @@
 
 det som enda må gjøres:
 
-- Expand FAQ on omoss.html
+
 - kontaktoss btn :active or :hover
 - Modal on katt spes.html (desktop)
 - Carousel on index.html (desktop)
 - Click outside nav in mobile to exit nav
 
+
 fixed:
 - when fetching p tag problem - multiple p tags
 - get categories each alone
-
+- Expand FAQ on omoss.html
 
 
 ## Husk det trenger bare å bli eksamens ferdig, kan modifiseres til KV senere.
