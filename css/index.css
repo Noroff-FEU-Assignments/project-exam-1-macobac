@@ -414,7 +414,7 @@ footer li a:hover {
     margin: 3% 0%;
 }
 
-/* fix box shadow */
+
 #submitBtn {
     color: inherit;
     border: none;
@@ -423,6 +423,15 @@ footer li a:hover {
     margin-left: auto;
 }
 
+#submitBtn:hover {
+    background-color: rgb(137, 185, 137);
+    box-shadow: inset 2px 5px 10px 0px #2e2e2e48;
+}
+
+#submitBtn:active {
+    background-color: var(--darkgreen);
+    box-shadow: inset 2px 5px 10px 0px #00000048;
+}
 
 
 
