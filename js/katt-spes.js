@@ -13,6 +13,16 @@ function fetchAPI() {
         .catch((error) => console.error(error));
 };
 
+function catImgModal(e) {
+    const modalContainer = document.querySelector(".cat-posts-img #modalContainer");
+
+    if (e.target.tagName === "IMG") {
+        modalContainer.classList.add("open-modal");
+    } else {
+        modalContainer.classList.remove("open-modal");
+    }
+}
+
 function displayPost(data) {
 
     const catName = data.title.rendered.split(" ")[0];
@@ -29,12 +39,19 @@ function displayPost(data) {
         <h1 class="katt-spes-title normal-heading">Katter som trenger hjem - ${catName}</h1>
         <div class="cat-posts-img katt-spes-img">
         <img src="${src}">
+        <div id="modalContainer"></div>
         </div>
         <p class="katt-spes-text">${pText}</p>
         `
         ;
 
     spesContainer.innerHTML += fetchedPost;
+
+
+    const catPostsModal = spesContainer.querySelector(".cat-posts-img");
+    if (catPostsModal) {
+        catPostsModal.addEventListener("click", catImgModal);
+    }
 
     const catgArr = data.categories;
     const catgProm = catgArr.map((catgId) => getCategory(catgId));
@@ -66,14 +83,5 @@ function getCategory(catgId) {
         .catch((error) => console.error(error));
 };
 
-function catImgModal(e) {
-    const imgContainer = document.querySelector("#imgContainer");
 
-    if (e.target.tagName === "IMG") {
-        imgContainer.classList.add("open-modal");
-    } else {
-        imgContainer.classList.remove("open-modal");
-    }
-}
-
-fetchAPI();
+document.addEventListener("DOMContentLoaded", fetchAPI);

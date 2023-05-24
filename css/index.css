@@ -324,16 +324,16 @@ footer li a:hover {
     display: none;
 }
 
-.faq-div.active + .faq-a {
+.faq-div.active+.faq-a {
     display: block;
 }
 
 .faq-div i {
-    transition: transform 0.3s ease-in-out; 
+    transition: transform 0.3s ease-in-out;
 }
 
 .faq-div.active i {
-    transform: rotate(180deg); 
+    transform: rotate(180deg);
 }
 
 
@@ -378,11 +378,13 @@ footer li a:hover {
     color: var(--darkgreen);
 }
 
-.visit, .openhours {
+.visit,
+.openhours {
     padding-bottom: 6%;
 }
 
-.visit p, .openhours p{
+.visit p,
+.openhours p {
     padding: 1% 0%;
 }
 
@@ -408,7 +410,8 @@ footer li a:hover {
     padding-bottom: 6%;
 }
 
-.low-contact input, textarea {
+.low-contact input,
+textarea {
     font-family: "noto-sans", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -476,3 +479,22 @@ footer li a:hover {
     align-self: center;
     margin-top: 10%;
 }
+
+body #modalContainer.open-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.7); /* Red background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Increased z-index value */
+  }
+  
+  body #modalContainer.open-modal img {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  
