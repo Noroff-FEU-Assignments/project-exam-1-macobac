@@ -30,7 +30,6 @@ function displayPost(data) {
         Katter som trenger hjem - ${catName}</h1>
         <div class="cat-posts-img katt-spes-img">
         <img src="${src}">
-        <div id="modalContainer"></div>
         </div>
         <p class="katt-spes-text">${pText}</p>
         `
@@ -69,24 +68,6 @@ function getCategory(catgId) {
 };
 
 
-
 fetchAPI();
 
 
-
-
-/* document.addEventListener("DOMContentLoaded", fetchAPI);
-function catImgModal(e) {
-    const modalContainer = document.querySelector(".cat-posts-img #modalContainer");
-
-    if (e.target.tagName === "IMG") {
-        modalContainer.classList.add("open-modal");
-    } else {
-        modalContainer.classList.remove("open-modal");
-    }
-}
-const catPostsModal = spesContainer.querySelector(".cat-posts-img");
-if (catPostsModal) {
-    catPostsModal.addEventListener("click", catImgModal);
-}
- */
