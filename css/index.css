@@ -451,20 +451,28 @@ footer li a:hover {
 
 .katt-spes-text {
     line-height: 2;
+    margin-bottom: 5%;
 }
 
-/* trenger symbol foran hver */
+.catg-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
 .categories {
     line-height: 2;
+    text-align: center;
+    margin-top: 2%;
 }
 
 .catpaw-symbol {
+    height: 50px;
+    width: 50px;
     background-image: url("/images/catpaw.png");
     background-repeat: no-repeat;
-    height: 100px;
-    width: 100px;
-    background-size: 50%;
-    display: inline-block;
-    vertical-align: middle;
-
+    background-size: 100%;
+    align-self: center;
+    margin-top: 10%;
 }

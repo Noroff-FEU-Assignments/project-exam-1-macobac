@@ -11,11 +11,7 @@ function fetchAPI() {
             displayPost(data);
         })
         .catch((error) => console.error(error));
-}
-
-fetchAPI();
-
-
+};
 
 function displayPost(data) {
 
@@ -70,4 +66,14 @@ function getCategory(catgId) {
         .catch((error) => console.error(error));
 };
 
-//modal should appear when images on blog post are clicked, making image bigger. click outside img to hide modal
+function catImgModal(e) {
+    const imgContainer = document.querySelector("#imgContainer");
+
+    if (e.target.tagName === "IMG") {
+        imgContainer.classList.add("open-modal");
+    } else {
+        imgContainer.classList.remove("open-modal");
+    }
+}
+
+fetchAPI();
