@@ -644,11 +644,17 @@ textarea {
         margin: 5% 20%;
     }
 
+    .homepg-cat-container .cat-posts-img {
+        width: 200px;
+    }
+
+
     /* Kontakt */
     .low-contact input,
     textarea {
         padding: 1%;
     }
+
 
     /* Katter */
     .cat-box-img {
