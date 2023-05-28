@@ -542,7 +542,7 @@ textarea {
 @media (min-width: 1024px) {
 
     /* Må gjøres: 
-    - hidden img om oss
+
     - carousel on index
      */
 
@@ -601,5 +601,31 @@ textarea {
         padding: 3% 20%;
     }
 
+    /* Alle */
 
+
+    /* Om oss */
+    .about-flex {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .about-hide-img {
+        background-image: url(/images/about-hide.png);
+        background-repeat: no-repeat;
+        width: 50%;
+        height: auto;
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
+    }
+
+    .about-flex p {
+        padding-left: 30px;
+        width: 50%;
+    }
+
+    /* Kontakt */
+
+    
 }
