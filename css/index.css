@@ -541,12 +541,6 @@ textarea {
 
 @media (min-width: 1024px) {
 
-    /* Må gjøres: 
-
-    - carousel on index
-     */
-
-
     /*-----Nav-----*/
     .nav-bars {
         display: none;
@@ -623,6 +617,52 @@ textarea {
     .about-flex p {
         padding-left: 30px;
         width: 50%;
+    }
+
+
+}
+
+
+@media (min-width: 1366px) {
+
+    header {
+        margin: 5% 20%;
+    }
+
+    /* Alle */
+    .normal-upper,
+    .normal-lower {
+        padding: 5% 20%;
+    }
+
+    .standard-article {
+        padding: 5% 20%;
+    }
+
+    /* Home */
+    .home-upper .normal-big-heading {
+        margin: 5% 20%;
+    }
+
+    /* Kontakt */
+    .low-contact input,
+    textarea {
+        padding: 1%;
+    }
+
+    /* Katter */
+    .cat-box-img {
+        height: 200px;
+    }
+
+    .katter-cat-container .cat-posts-img {
+        width: 250px;
+    }
+
+
+    /* Footer */
+    .copyright {
+        margin: 1% 20%;
     }
 
 
