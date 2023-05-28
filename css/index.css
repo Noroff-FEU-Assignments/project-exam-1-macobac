@@ -673,3 +673,49 @@ textarea {
 
 
 }
+
+@media (min-width: 1920px) {
+
+    header {
+        margin: 5% 25%;
+    }
+
+    /* Alle */
+    .normal-upper,
+    .normal-lower {
+        padding: 5% 25%;
+    }
+
+    .standard-article {
+        padding: 5% 25%;
+    }
+
+    /* Home */
+    .home-upper .normal-big-heading {
+        margin: 5% 25%;
+    }
+
+    .homepg-cat-container .cat-posts-img {
+        width: 230px;
+    }
+
+    /* Katter */
+    .cat-box-img {
+        height: 300px;
+    }
+
+    .katter-cat-container .cat-posts-img {
+        width: 300px;
+    }
+
+
+    /* Footer */
+    .copyright {
+        margin: 1% 25%;
+    }
+
+    footer ul {
+        padding: 3% 30%;
+    }
+
+}
