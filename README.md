@@ -24,18 +24,6 @@ later:
 - two cats on kontakt.html
 
 
-fixed:
-- when fetching p tag problem - multiple p tags
-- get categories each alone
-- Expand FAQ on omoss.html
-- kontaktoss btn :active or :hover
-- kontaktformular feilmld
-
-
-
-
-
-
 
 
 ## Goal
