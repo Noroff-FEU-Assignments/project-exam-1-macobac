@@ -4,6 +4,7 @@ let page = 1;
 let limit = 4;
 let totalPosts = 0;
 
+
 function fetchAPI() {
 
     fetch(POSTS_API + "?page=" + page + "&per_page=" + limit)

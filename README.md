@@ -5,14 +5,11 @@
 
 det som enda må gjøres:
 
-- responsiveness all pgs
 - Modal on katt spes.html (desktop)
 - Carousel on index.html (desktop)
 
 
 
-
-## Husk det trenger bare å bli eksamens ferdig, kan modifiseres til KV senere.
 
 later:
 - Click outside nav in mobile to exit nav
