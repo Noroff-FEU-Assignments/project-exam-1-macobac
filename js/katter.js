@@ -1,4 +1,4 @@
-const POSTS_API = "http://kattens-vern.local/wp-json/wp/v2/posts";
+const POSTS_API = "https://kv.sarahanjaheuer.no/wp-json/wp/v2/posts";
 const catContainer = document.querySelector(".katter-cat-container");
 let page = 1;
 let limit = 10;

@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const spesContainer = document.querySelector(".spes-katt");
-const POSTS_API = "http://kattens-vern.local/wp-json/wp/v2/posts";
-const CATG_API = "http://kattens-vern.local/wp-json/wp/v2/categories";
+const POSTS_API = "https://kv.sarahanjaheuer.no/wp-json/wp/v2/posts";
+const CATG_API = "https://kv.sarahanjaheuer.no/wp-json/wp/v2/categories";
 
 function fetchAPI() {
     const postId = urlParams.get("id");
