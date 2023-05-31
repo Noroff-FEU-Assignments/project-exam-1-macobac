@@ -274,13 +274,10 @@ footer li a:hover {
     text-decoration: underline;
 }
 
-.les-mer:hover {
+.les-mer a:hover, .se-mer a:hover{
     font-weight: 700;
 }
 
-.se-mer:hover {
-    font-weight: 700;
-}
 
 
 
