@@ -1,28 +1,6 @@
 ## Project Exam 1
 
 
-
-
-det som enda må gjøres:
-
-- Modal on katt spes.html (desktop)
-- Carousel on index.html (desktop)
-
-
-
-
-later:
-- Click outside nav in mobile to exit nav
-- paste multiple imgs in wp
-- fetch multiple imgs
-- Cat chilling img on index.html
-- Cat hanging img on katter.html
-- Cat sitting on footer at omoss.html
-- two cats on kontakt.html
-
-
-
-
 ## Goal
 To put into practice the skills learned over your first year of studies.
 
