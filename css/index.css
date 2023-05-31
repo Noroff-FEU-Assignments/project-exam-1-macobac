@@ -67,6 +67,10 @@ header {
 
 /*-----Nav-----*/
 
+.hidden-span {
+    display: none;
+}
+
 .nav-logo img {
     height: 30px;
 }
