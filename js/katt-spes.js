@@ -29,7 +29,7 @@ function displayPost(data) {
         <h1 class="katt-spes-title normal-heading">
         Katter som trenger hjem - ${catName}</h1>
         <div class="cat-posts-img katt-spes-img">
-        <img src="${src}">
+        <img src="${src}" alt="Bilde av katt">
         </div>
         <p class="katt-spes-text">${pText}</p>
         `
