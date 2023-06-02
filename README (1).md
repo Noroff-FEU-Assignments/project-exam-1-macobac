@@ -1,10 +1,10 @@
-# Semester Project 1
+# Project Exam 1
 
-This project was a school assignment where I had to create a website for an interactive science museum.
+This project was a school assignment where I had to create a website for a self-chosen theme with a CMS.
 
 ## Description
 
-The museums core target audience consists of primary and middle school children ages 7-15. The brief stated it should be an informative, appealing website, and it should take for granted that the audience is curious and intelligent.
+The website theme I chose is a local non-profit cat rescue shelter, where they can put in new cats age, name and image through WordPress. The requirements for this page were that it had to be a headless CMS with WordPress, and it had to have a Homepage, Contact, About, Blog and blog specific page.
 
 ## Built With
 
